@@ -1,46 +1,103 @@
-<div class="container">
-
-      <div class="masthead">
-        <!-- <h3 class="text-muted">Ravi Patel	</h3> -->
-        <nav>
-          <ul class="nav nav-justified">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Pictures</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <!-- Jumbotron -->
-      <div class="jumbotron">
-        <h1>Ravi Patel</h1>
-        <p class="lead">This is my personal project get familiar with webdev</p>
-        <!-- <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p> -->
-      </div>
-
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-lg-4">
-          <h2>Safari bug warning!</h2>
-          <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
         </div>
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Paragraph</p>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Paragraph</p>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#about">About</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#pictures">Pictures</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contact">Contact</a>
+                </li>
+            </ul>
         </div>
-      </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
 
-      <!-- Site footer -->
-      <footer class="footer">
-        <p>&copy; Ravi Patel 2015</p>
-      </footer>
+<!-- Intro Header -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="brand-heading name">Ravi Patel</h1>
+                    <p class="intro-text">
+                      Software Quality Assurance Engineer
+                      <br> 
+                      <a href="www.bazaarvoice.com">Bazaarvoice Inc.</a>
+                    </p>
+                    <a href="#about" class="btn btn-circle page-scroll">
+                        <i class="fa fa-angle-double-down animated"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
-    </div> <!-- /container -->
+<!-- About Section -->
+<section id="about" class="container-fluid content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>About Me</h2>
+            <p>Recently graduated from <a href="www.uwaterloo.ca">University of Waterloo</a> and currently working as Software Quality Assurance Engineer at <a href="www.bazaarvoice.com">Bazaarvoice</a> in Austin, Tx</p>
+        </div>
+    </div>
+</section>
+
+<!-- Picture Section -->
+<section id="pictures" class="  content-section text-center">
+    <!-- <div class="picture-section"> -->
+    <div class="row picture-section">
+        <div class="container-fluid">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Pictures</h2>
+                <p>Photography has always been a hobby of mine and I would like to share some of my memories with you</p>
+                <a href="#pictures" class="btn btn-default btn-lg">Visit Pictures Page</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact-fluid" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Contact Me</h2>
+            <p><a href="mailto:r48patel@gmail.com">r48patel@gmail.com</a>
+            </p>
+            <ul class="list-inline banner-social-buttons">
+                <li>
+                    <a href="https://twitter.com/r48patel" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                </li>
+                <li>
+                    <a href="https://github.com/r48patel" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/106835470822889106153/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>Copyright &copy; Ravi Patel 2015</p>
+    </div>
+</footer>

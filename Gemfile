@@ -39,6 +39,8 @@ gem 'unicorn'
 gem 'sprockets-rails'
 gem 'sprockets'
 gem 'autoprefixer-rails'
+gem 'font-awesome-rails'
+gem 'jquery-easing-rails'
 group :production do
   gem 'pg'
 end
