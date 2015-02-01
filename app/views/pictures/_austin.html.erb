@@ -1,15 +1,14 @@
-<div id="AustinHeader"><p>Austin</p></div>
+<div id="AustinHeader" class="text-center"><h1>Austin - Trail of Lights</h1></div>
 <div id="austinCarousel" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#austinCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#austinCarousel" data-slide-to="1"></li>
-    <li data-target="#austinCarousel" data-slide-to="2"></li>
-  </ol>
-  
   <div class="carousel-inner" role="listbox">
+    <ol class="carousel-indicators">
+      <li data-target="#austinCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#austinCarousel" data-slide-to="2"></li>
+      <li data-target="#austinCarousel" data-slide-to="3"></li>
+    </ol>
     <div class="item active">
       <!-- <a href="<%= asset_path( 'intro-bg2.jpg' ) %>"> <img src="<%= asset_path( 'intro-bg2.jpg' ) %>" /> </a> -->
-      <img src="<%= asset_path( 'lights_1.JPG' ) %>" width="460" height="345" />
+      <img src="<%= asset_path( 'lights_5.JPG' ) %>" width="460" height="345" />
       <!-- <div class="container">
         <div class="carousel-caption">
           <h1>Example headline.</h1>
@@ -18,15 +17,10 @@
         </div>
       </div> -->
     </div>
-    
-    <div class="item">
-      <img src="<%= asset_path( 'lights_2.JPG' ) %>" width="460" height="345" />
-    </div>
-
-    <div class="item">
-      <img src="<%= asset_path( 'lights_3.JPG' ) %>" width="460" height="345" />
-    </div>
-  </div>
+    <!-- Creates tags for lights_2 and lights_3-->
+    <% (2..3).each do |i| %>
+      <%= content_tag(:div, image_tag("lights_#{i}.JPG", class: "picture"), class: "item")%>
+    <% end %>
   
   <a class="left carousel-control" href="#austinCarousel" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
