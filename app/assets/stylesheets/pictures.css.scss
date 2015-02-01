@@ -47,3 +47,9 @@
 h1, p{
     text-shadow: 1px 1px #000;
 }
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
