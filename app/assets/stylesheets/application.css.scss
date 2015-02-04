@@ -18,3 +18,17 @@
 .footer-paragraph {
 	font-size: 15px;
 }
+
+.picture-button {
+    border: 1px solid #FFF052;
+    color: #FFF052;
+    background-color: transparent;
+}
+
+.picture-button:hover,
+.picture-button:focus {
+    border: 1px solid #FFF052;
+    outline: 0;
+    color: #000;
+    background-color: #FFF052;
+}
