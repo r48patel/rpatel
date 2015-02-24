@@ -6,7 +6,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <meta name="description" content="">
 	    <meta name="author" content="">
-	    <link rel="shortcut icon" href="favicon.ico">
+	    <link rel="shortcut icon" href= <%= asset_path( 'favicon.ico' ) %> >
 	  	<title>Pictures</title>
 	  	<link href="/assets/pictures.css.scss" rel="stylesheet">
   	    <link href="/assets/grayscale.css" rel="stylesheet">
@@ -19,7 +19,7 @@
 		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
 		                <i class="fa fa-bars"></i>
 		            </button>
-		            <a class="navbar-brand page-scroll" href="http://www.rpatel.me">
+		            <a class="navbar-brand page-scroll" href= "/home">
                     	<i class="fa fa-home"></i>  <span class="light">Home</span>
                 	</a>
 		        </div>
@@ -41,6 +41,7 @@
 		    </div>
 		</header>		
 		<%= render :partial => "austin" %>
+		<%= render :partial => "niagara" %>
 
 		<!-- Footer -->
 		<footer>
