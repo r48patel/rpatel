@@ -1,40 +1,29 @@
 <div id="NiagaraHeader" class="text-center"><h1>Niagara Falls</h1></div>
 <div id="NiagaraCarousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
-      <ol class="carousel-indicators">
-        <li data-target="#NiagaraCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#NiagaraCarousel" data-slide-to="1" class="active"></li>
-        <li data-target="#NiagaraCarousel" data-slide-to="2"></li>
-        <li data-target="#NiagaraCarousel" data-slide-to="3"></li>
-        <li data-target="#NiagaraCarousel" data-slide-to="4"></li>
-        <li data-target="#NiagaraCarousel" data-slide-to="5"></li>
-        <li data-target="#NiagaraCarousel" data-slide-to="6"></li>
-        <li data-target="#NiagaraCarousel" data-slide-to="7"></li>
-        <li data-target="#NiagaraCarousel" data-slide-to="8"></li>
-        <li data-target="#NiagaraCarousel" data-slide-to="9"></li>
-        <li data-target="#NiagaraCarousel" data-slide-to="10"></li>
-      </ol>
-      <div class="item active">
-        <!-- <a href="<%= asset_path( 'intro-bg2.jpg' ) %>"> <img src="<%= asset_path( 'intro-bg2.jpg' ) %>" /> </a> -->
-        <img src="<%= asset_path( 'Niagara/1.jpg' ) %>" width="460" height="345" />
-        <!-- <div class="container">
-          <div class="carousel-caption">
-            <h1>Example headline.</h1>
-            <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-          </div>
-        </div> -->
-      </div>
-      <!-- Creates tags for lights_2 and lights_3-->
-      <% (2..11).each do |i| %>
-        <%= content_tag(:div, image_tag("Niagara/#{i}.jpg", class: "picture"), class: "item")%>
+    <%= content_tag(:ol, class: "carousel-indicators") do%>
+      <% (0..10).each do |j| %>
+        <% if "#{j}" == "0" %>
+          <%= tag("li", class: "active", data: {target: "#NiagaraCarousel", slide_to: "#{j}"})%>
+        <% else %>
+          <%= tag("li", data: {target: "#NiagaraCarousel", slide_to: "#{j}"})%>
+        <% end %>
       <% end %>
-    
+    <% end %>
+
+    <% (0..10).each do |i| %>
+      <% if "#{i}" == "0" %>
+        <%= content_tag(:div, image_tag("Niagara/#{i}.jpg", class: "picture", width: "200", height: "200"), class: "item active")%>
+      <% else %>
+        <%= content_tag(:div, image_tag("Niagara/#{i}.jpg", class: "picture", width: "200", height: "200"), class: "item")%>
+      <% end %>
+    <% end %>
+
     <a class="left carousel-control" href="#NiagaraCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#NiagaraCarousel" role="button" data-slide="next">
+     </a>
+     <a class="right carousel-control" href="#NiagaraCarousel" role="button" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>

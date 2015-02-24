@@ -1,0 +1,31 @@
+<div id="Austin_TOLHeader" class="text-center"><h1>Austin - Trail of Lights</h1></div>
+<div id="Austin_TOLCarousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <%= content_tag(:ol, class: "carousel-indicators") do%>
+      <% (0..3).each do |j| %>
+        <% if "#{j}" == "0" %>
+          <%= tag("li", class: "active", data: {target: "#Austin_TOLCarousel", slide_to: "#{j}"})%>
+        <% else %>
+          <%= tag("li", data: {target: "#Austin_TOLCarousel", slide_to: "#{j}"})%>
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <% (0..3).each do |i| %>
+      <% if "#{i}" == "0" %>
+        <%= content_tag(:div, image_tag("Austin_TOL/#{i}.jpg", class: "picture", width: "200", height: "200"), class: "item active")%>
+      <% else %>
+        <%= content_tag(:div, image_tag("Austin_TOL/#{i}.jpg", class: "picture", width: "200", height: "200"), class: "item")%>
+      <% end %>
+    <% end %>
+
+    <a class="left carousel-control" href="#Austin_TOLCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+     </a>
+     <a class="right carousel-control" href="#Austin_TOLCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<!-- <%= tag("li", data: {target: 'Stephen', slide_to: %w(Chicago IL)})%> -->
+<!-- <a href="<%= asset_path( 'intro-bg2.jpg' ) %>"> <img src="<%= asset_path( 'intro-bg2.jpg' ) %>" /> </a> -->
+
+From _austin.html.erb
+<div class="item active">
+	<img src="<%= asset_path( 'Niagara/1.jpg' ) %>" width="460" height="345" />
+    <div class="container">
+	    <div class="carousel-caption">
+	        <h1>Example headline.</h1>
+	        <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+	        <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+	    </div>
+    </div>
+</div>
